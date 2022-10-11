@@ -1,0 +1,521 @@
+.usuarios{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    font-size: 36px;
+}
+.selectUsuarios{
+    position:absolute;
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.selectUsuario-btn{
+    position:absolute;
+    margin: auto;
+    top: 200px;
+    left: 0px;
+    right: 0;
+    width: 500px;
+    height: 30px;
+    background-color: #4E4E4E;
+    box-shadow: 0 0 5px 1px #4E4E4E;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+#calendar{
+    position: relative;
+    margin: auto;
+    margin-top: 250px;
+    width: 1980px;
+    height: 700px;
+}
+.add-schedule, .back-schedule{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: #4E4E4E;
+    box-shadow: 0 0 10px 3px #4E4E4E ;
+    border: none;
+    width: max-content;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#new-schedule{
+    position:relative;
+    width: 600px;
+    height: 900px;
+    margin: auto;
+    top: 250px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;   
+    box-shadow:0 10px 50px 0px #4E4E4E;
+}
+.agendamento{
+    text-align: center;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.agendamento h2{
+    margin-bottom: 50px;
+    font-size:2rem;
+    color: #000;
+}
+.agendamento input{
+    display: block;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 30px;
+    font-size: 1rem;
+    margin: 50px auto;
+    text-align: center;
+    color: #000;
+}
+.agendamento select{
+    display: block;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    color: #000;
+    padding-left: 20px;
+}
+.agendamento input::placeholder{
+    color: #000;
+    padding-left: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+.agendamento button{
+    width: 300px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: #4E4E4E;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    font-size: 20px;
+    border: #fff;
+    cursor: pointer;
+}
+.procedimento{
+    height: 120px;
+    border-radius: 20px;
+    border: 1px #4E4E4E solid;
+    width: 300px;
+    font-size: 18px;
+    resize: none;
+    text-align: center;
+    padding-top: 45px;
+    color: #000;
+}
+.procedimento::placeholder{
+    color: #000;
+    padding-left: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+.data-hora::-webkit-datetime-edit {
+    color: #000;
+    padding-left: 20px;
+    text-align: left;
+
+}
+.data-hora::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+    padding-right: 20px;
+}
+#estado{
+    display: flex;
+    height: max-content;
+    margin-bottom: 50px;
+}
+#cancelar, #agendar, #confirmar{
+    margin: 0 10px;
+    width: 20px;
+}
+label{
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    font-size: 20px;
+}
+#legenda{
+    position: absolute;
+    margin: auto;
+    display: flex;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    font-size: 20px;
+}
+.red, .blue, .green{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: #2994d1;
+}
+.green{
+    background-color: #63d867;
+}
+@media (max-width: 1920px){
+    #calendar{
+        margin-top: 250px;
+        width: 1280px;
+        height: 500px;
+    }
+    tr.calendar-body .calendar-day {
+        padding: 0 0;
+    }
+    #new-schedule{
+        height: 750px;
+        top: 200px;
+    }
+    .agendamento h2{
+        margin-bottom: 30px;
+    }
+    .agendamento input, .agendamento select{
+        margin: 40px auto;
+    }
+}
+@media (max-width: 1280px){
+    .usuarios{
+        top: 100px;
+        font-size: 26px;
+    }
+    .selectUsuarios{
+        top: 140px;
+        width: 400px;
+        font-size: 16px;
+    }
+    .selectUsuario-btn{
+        top: 190px;
+        width: 400px;
+        font-size: 16px;
+    }
+    #calendar{
+        margin-top: 210px;
+        width: 80%;
+        height: 400px;
+    }
+    tr.calendar-body .calendar-day .day {
+        padding: 4px;
+        width: 45px;
+        height: 45px;
+    }
+    .calendar-inner {
+        max-width: calc(100% - 510px);
+    }
+    .calendar-sidebar > .calendar-year {
+        padding: 5px;
+        text-align: center;
+    }
+    .calendar-sidebar > .calendar-year > p{
+        font-size: 26px;
+    }
+    .calendar-sidebar > .calendar-year > button.icon-button{
+        width: 15px;
+        height: 15px;
+    }
+    .calendar-sidebar > .month-list > .calendar-months > li{
+        font-size: 14px;
+    }
+    .calendar-events {
+        width: 330px;
+        padding: 70px 10px 60px 30px;
+    }
+    .event-header {
+        width: max-content;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .event-header > p {
+        font-size: 10px;
+    }
+    .event-indicator > .type-bullet > div {
+        margin: 0;
+        width: 5px;
+        height: 5px;
+    }
+    .add-schedule, .back-schedule{
+        bottom: 20px;
+        right: 20px;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    #legenda{
+        bottom: 10px;
+        font-size: 14px;
+    }
+    .red, .blue, .green{
+        height: 10px;
+        width: 10px;
+    }
+    #new-schedule{
+        top: 150px;
+        width: 800px;
+        height: 500px;
+    }
+    .agendamento{
+        display: grid;
+        grid-template-areas:
+        'titulo titulo'
+        'cliente cliente'
+        'usuario telefone'
+        'data hora'
+        'description description'
+        'salvar salvar'
+        ;
+        gap: 20px 50px;
+    }
+    .agendamento h2{
+        margin-bottom: 15px;
+        grid-area: titulo;
+    }
+    #cliente{
+        grid-area: cliente;
+    }
+    #telefone{
+        grid-area: telefone;
+    }
+    #doutor{
+        grid-area: usuario;
+    }
+    #description{
+        margin: auto;
+        grid-area: description;
+    }
+    #data{
+        grid-area: data;
+    }
+    #hora{
+        grid-area: hora;
+    }
+    #salvarCliente{
+        margin: auto;
+        grid-area: salvar;
+    }
+    .agendamento input, .agendamento select{
+        text-align: center;
+        margin: auto;
+    }
+    .agendamento input::placeholder, .agendamento select::placeholder{
+        text-align: center;
+        padding: 0;
+    }
+}
+@media (max-width: 900px){
+    #calendar{
+        top: 0px;
+        width: 70%;
+    }
+    #legenda{
+        display: grid;
+        grid-template-areas: 
+        'r a p1'
+        'b a p2'
+        'g a p3'
+        ;
+        right: 70%;
+        bottom: 5px;
+    }
+    .red, .blue, .green{
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    .redP{
+        grid-area: p1;
+    }
+    .blueP{
+        grid-area: p2;
+    }
+    .greenP{
+        grid-area: p3;
+    }
+    .red{
+        grid-area: r;
+    }
+    .blue{
+        grid-area: b;
+    }
+    .green{
+        grid-area: g;
+    }
+    #new-schedule{
+        width: 80%;
+    }
+    .agendamento input, .agendamento select{
+        text-align: center;
+        margin: auto;
+        width: 200px;
+    }
+}
+@media (max-width: 700px){
+    #calendar{
+        width: 90%;
+    }
+    #new-schedule{
+        width: 80%;
+        height: 600px;
+    }
+    .agendamento{
+        grid-template-areas:
+        'titulo titulo'
+        'cliente cliente'
+        'telefone telefone'
+        'usuario usuario'
+        'description description'
+        'data data'
+        'hora hora'
+        'salvar salvar'
+        ;
+    }
+    .agendamento select{
+        margin-left: 50px;
+    }
+    .agendamento input, .agendamento select{
+        width: 300px;
+    }
+
+}
+@media (max-width: 550px){
+    .usuarios{
+        top: 110px;
+        font-size: 22px;
+    }
+    .selectUsuarios{
+        top: 150px;
+        width: 70%;
+        height: 20px;
+    }
+    .selectUsuario-btn{
+        top: 180px;
+        width: 70%;
+        height: 20px;
+        font-size: 14px;
+    }
+    .event-indicator{
+        top: 35px;
+    }
+    .calendar-events {
+        width: 100%;
+        padding: 10px;
+    }
+    .add-schedule, .back-schedule{
+        bottom: 10px;
+        right: 10px;
+    }
+    .agendamento input, .agendamento select, #salvarCliente, .procedimento{
+        width: 250px;
+    }
+    #legenda{
+        position: absolute;
+        display: grid;
+        grid-template-areas: 
+        'r a p1'
+        'b a p2'
+        'g a p3'
+        ;
+        right: 70%;
+        bottom: 0px;
+    }
+    .red, .blue, .green{
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    .redP{
+        grid-area: p1;
+    }
+    .blueP{
+        grid-area: p2;
+    }
+    .greenP{
+        grid-area: p3;
+    }
+    .red{
+        grid-area: r;
+    }
+    .blue{
+        grid-area: b;
+    }
+    .green{
+        grid-area: g;
+    }
+}
+@media (max-width: 425px){
+    #calendar{
+        height: max-content;
+    }
+    .event-indicator{
+        top: 22px;
+    }    
+}
+@media (max-width: 400px){
+    #calendar{
+        width: 90%;
+    }
+    th[colspan="7"]::after {
+        top: 35px;
+    }
+    .agendamento input, .agendamento select, #salvarCliente, .procedimento{
+        width: 200px;
+    }
+    .event-indicator{
+        top: 17px;
+    }
+    .event-indicator > .type-bullet > div {
+        width: 4px;
+        height: 4px;
+    }
+    .event-header {
+        width: max-content;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    tr.calendar-body .calendar-day .day {
+        padding: 5px;
+        width: 25px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 350px){
+    .agendamento input, .agendamento select, #salvarCliente, .procedimento{
+        width: 150px;
+    }
+}

@@ -1,0 +1,679 @@
+.clientes{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    font-size: 36px;
+}
+#buscarCliente{
+    position:absolute;
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.erro{
+    position:absolute;
+    margin: auto;
+    display: flex;
+    top: 150px;
+    left: 0;
+    right: 0px;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-align: center;
+}
+.buscarCliente-btn{
+    position:absolute;
+    margin: auto;
+    top: 200px;
+    left: 0px;
+    right: 0;
+    width: 500px;
+    height: 30px;
+    background-color: #4E4E4E;
+    box-shadow: 0 0 5px 1px #4E4E4E;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+#listaClientes, #listaClientesEdit{
+    margin: auto;
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    background: #fff;
+    box-shadow: 0 10px 50px 0px #4E4E4E;
+    top: 250px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.container{
+    position: absolute;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    justify-items: center;
+}
+.hide{
+    display: none;
+}
+
+/* ESTE GRID AREA É PARA VISUALIZAR */
+.clienteDados{
+    list-style:none;
+    width: 100%;
+    height: 700px;
+    border-bottom: #000 1px solid;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+    'nome nome nome nome nome'
+    'atendente atendente z telefone telefone'
+    'hora hora z data data'
+    'description description z status status'
+    'anotação anotação a a a'
+    'anotação anotação espaço espaço editar-atualizar';
+    align-items: center;
+}
+
+.clienteDados p, h3, .telefone{
+    height: max-content;
+    width: max-content;
+    margin: auto;
+}
+.nome{
+    position: relative;
+    font-size: 28px;
+    text-align: center;
+    grid-area: nome;
+}
+.atendenteTitle{
+    position: relative;
+    font-size: 20px;
+    grid-area: atendente;    
+}
+.atendente{
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    grid-area: atendente;    
+}
+.telefoneTitle{
+    position: relative;
+    font-size: 20px;
+    grid-area: telefone;
+}
+.telefone{
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    grid-area: telefone;
+}
+.horaTitle{
+    position: relative;
+    font-size: 20px;
+    top: 20px;
+    grid-area: hora;
+}
+.hora{
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    grid-area: hora;
+}
+.dataTitle{
+    position: relative;
+    font-size: 20px;
+    top: 20px;
+    grid-area: data;
+}
+.data{
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    grid-area: data;
+}
+.descriptionTitle{
+    position: relative;
+    font-size: 20px;
+    top: 30px;
+    grid-area: description;
+}
+.description{
+    position: relative;
+    top: -50px;
+    max-width: 350px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 20px;
+    grid-area: anotação;
+}
+.typeTitle{
+    position: relative;
+    font-size: 20px;
+    top: 30px;
+    grid-area: status;
+}
+.type{
+    position: relative;
+    top: 60px;
+    font-size: 20px;
+    grid-area: status;
+}
+.editar{
+    position: relative;
+    top: 20px;
+    right: 30px;
+    text-align: end;
+    font-style: italic;
+    cursor: pointer;
+    font-size: 22px;
+    grid-area: editar-atualizar;
+}
+
+/* ESTE GRID AREA É PARA EDITAR */
+
+.clienteEdit{
+    list-style:none;
+    width: 100%;
+    height: 700px;
+    border-bottom: #000 1px solid;
+    display: grid;
+    grid-template-areas: 
+    'nome nome nome nome nome'
+    'atendente atendente a telefone telefone'
+    'hora hora z data data'
+    'anotaçãoTitle anotaçãoTitle b status status'
+    'anotação anotação f f f'
+    'anotação anotação e e editar-atualizar'
+    ;
+    align-items: center;
+}
+.atualizar{
+    position: relative;
+    right: 30px;
+    text-align: end;
+    font-style: italic;
+    cursor: pointer;
+    font-size: 22px;
+    grid-area: editar-atualizar;
+}
+.excluir{
+    position: relative;
+    right: 60px;
+    text-align: start;
+    font-style: italic;
+    cursor: pointer;
+    font-size: 22px;
+    grid-area: editar-atualizar;
+}
+.askRemover{
+    position:relative;
+    display: grid;
+    margin: auto;
+    top: 50%;
+    width: 300px;
+    height: 200px;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #4E4E4E;
+    border-radius: 20px;
+}
+.askRemover p{
+    margin: auto;
+}
+.askRemover button{
+    margin: auto;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.nomeTitleEdit{
+    position: relative;
+    height: max-content;
+    font-size: 26px;
+    grid-area: nome;
+}
+.nomeEdit{
+    position: relative;
+    font-size: 18px;
+    top: 40px;
+    margin: auto;
+    padding-left: 10px;
+    grid-area: nome;    
+}
+.atendenteTitleEdit{
+    position: relative;
+    font-size: 22px;
+    margin: auto;
+    grid-area: atendente;    
+}
+.atendenteEdit{
+    position: relative;
+    font-size: 18px;
+    top: 40px;
+    margin: auto;
+    padding-left: 10px;
+    grid-area: atendente;    
+}
+.telefoneTitleEdit{
+    position: relative;
+    font-size: 22px;
+    margin: auto;
+    grid-area: telefone;    
+}
+.telefoneEdit{
+    position: relative;
+    font-size: 18px;
+    top: 40px;
+    padding-left: 10px;
+    margin: auto;
+    grid-area: telefone;    
+}
+.horaTitleEdit{
+    position: relative;
+    font-size: 22px;
+    top: 20px;
+    margin: auto;
+    grid-area: hora;
+}
+.horaEdit{
+    position: relative;
+    font-size: 18px;
+    width: max-content;
+    top: 70px;
+    margin: auto;
+    padding-left: 10px;
+    grid-area: hora;
+}
+.dataTitleEdit{
+    position: relative;
+    font-size: 22px;
+    top: 20px;
+    margin: auto;
+    grid-area: data;
+}
+.dataEdit{
+    position: relative;
+    font-size: 18px;
+    width: 150px;
+    top: 70px;
+    margin: auto;
+    text-align: center;
+    grid-area: data;
+}
+.descriptionTitleEdit{
+    position: relative;
+    font-size: 22px;
+    top: 50px;
+    margin: auto;
+    grid-area: anotaçãoTitle;
+}
+.descriptionEdit{
+    position: relative;
+    font-size: 18px;
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    resize: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    grid-area: anotação;
+}
+.typeTitleEdit{
+    position: relative;
+    margin: auto;
+    top: 50px;
+    font-size: 22px;
+    grid-area: status;
+}
+.radio{
+    position: relative;
+    top: 115px;
+    width: max-content;
+    margin: auto;
+    font-size: 18px;
+}
+.cancelarEdit{
+    margin-right: 35%;
+    grid-area: status;
+}
+.cancelarLabelEdit{
+    top: 100px;
+    margin-right: 30%;
+    grid-area: status;
+}
+.confirmarEdit{
+    margin-left: 37%;
+    grid-area: status;
+}
+.confirmarLabelEdit{
+    top: 100px;
+    margin-left:30%;
+    grid-area: status;
+}
+.hide{
+    display: none;
+}
+.red{
+    color: red;
+}
+.blue{
+    color:#2994d1;
+}
+.green{
+    color:#63d867;
+}
+@media (max-width: 1920px){
+    #listaClientes, #listaClientesEdit, 
+    .clienteDados, .clienteEdit{
+        height: 600px;
+    }
+}
+@media (max-width: 1280px){
+    .clientes{
+        font-size: 26px;
+    }
+    #buscarCliente, .erro{
+        top: 140px;
+        width: 400px;
+        font-size: 16px;
+    }
+    .buscarCliente-btn{
+        top: 190px;
+        width: 400px;
+        font-size: 16px;
+    }
+    #listaClientes, #listaClientesEdit{
+        top: 210px;
+        width: 70%;
+        height: 400px;
+    }
+    .clienteDados, .clienteEdit{
+        height: 400px;
+    }
+    /* PARTE DE VISUALIZAR */
+    .nome{
+        font-size: 22px;
+    }
+    .atendenteTitle, .telefoneTitle{
+        font-size: 18px;
+        top: -10px;
+    }
+    .atendente, .telefone{
+        font-size: 18px;
+        top: 20px;
+    }
+    .horaTitle, .dataTitle{
+        font-size: 18px;
+        top: 0px;
+    }
+    .hora, .data{
+        font-size: 18px;
+        top: 30px;
+    }
+    .descriptionTitle, .typeTitle{
+        font-size: 18px;
+        top: 10px;
+    }
+    .description{
+        max-width: 250px;
+        max-height: 100px;
+        font-size: 18px;
+        top: -30px;
+    }
+    .type{
+        font-size: 18px;
+        top: 50px;
+    }
+    .editar{
+        top: 0px;
+    }
+
+    /* PARTE DE EDITAR  */
+
+    .atualizar, .excluir, .editar{
+        font-size: 18px;
+    }
+    .askRemover{
+        width: 250px;
+        height: 150px;
+        top: 30%;
+        font-size: 18px;
+    }
+    .askRemover button{
+        padding: 2px;
+        font-size: 14px;
+    }
+    .nomeTitleEdit{
+        font-size: 20px;
+    }
+    .nomeEdit{
+        top: 30px;
+        font-size: 14px;
+    }.atendenteTitleEdit, .telefoneTitleEdit{
+        font-size: 20px;
+        top: 20px;
+    }
+    .atendenteEdit, .telefoneEdit{
+        font-size: 14px;
+        top: 50px;
+    }
+    .horaTitleEdit, .dataTitleEdit{
+        font-size: 20px;
+        top: 30px;
+    }
+    .horaEdit, .dataEdit{
+        font-size: 14px;
+        top: 60px;
+    }
+    .descriptionTitleEdit, .typeTitleEdit{
+        font-size: 20px;
+    }
+    .descriptionEdit{
+        top: 10px;
+        font-size: 14px;
+        height: 100px;
+    }
+    .radio{
+        top: 95px;
+        font-size: 14px;
+    }
+    .cancelarEdit{
+        left: 14px;
+    }
+    .cancelarLabelEdit{
+        top: 80px;
+        left: 18px;
+    }
+    .confirmarEdit{
+        right: 14px;
+    }
+    .confirmarLabelEdit{
+        right: 14px;
+        top: 80px;
+    }
+}
+@media (max-width: 900px){
+    .excluir{
+        right: 80px;
+    }
+    .description{
+        max-width: 150px;
+    }
+    .cancelarLabelEdit{
+        left: 30px;
+    }
+    .confirmarLabelEdit{
+        right: 30px;
+    }
+    .cancelarEdit{
+        left: 25px;
+    }
+    .confirmarEdit{
+        right: 25px;
+    }
+}
+@media (max-width: 700px){
+    #listaClientes, #listaClientesEdit{
+        height: 670px;
+    }
+    .clienteDados{
+        height: max-content;
+        grid-template-areas:
+        'nome nome'
+        'atendente atendente'
+        'telefone telefone'
+        'hora hora'
+        'data data'
+        'status status'
+        'description description'
+        'anotação anotação'
+        'editar-atualizar editar-atualizar';
+        gap: 50px 0;
+    }
+    .nome{
+        top: 10px;
+        font-size: 26px;
+    }
+    .descriptionTitle{
+        top: 0;
+    }
+    .description{
+        top: -30px;
+        max-width: 200px;
+        max-height: 90px;
+    }
+    .typeTitle{
+        top: 0px;
+    }
+    .type{
+        top: 30px;
+    }
+    .editar{
+        top: -10px;
+        right: 0px;
+        text-align: center;
+    }
+    .clienteEdit{
+        height: max-content;
+        grid-template-areas: 
+        'nome nome'
+        'atendente atendente'
+        'telefone telefone'
+        'hora hora'
+        'data data'
+        'anotaçãoTitle anotaçãoTitle'
+        'anotação anotação'
+        'status status'
+        'editar-atualizar editar-atualizar'
+        ;
+        gap: 49px 0;
+    }
+    .nomeTitleEdit{
+        top: 20px;  
+    }
+    .nomeEdit{
+        top: 50px;  
+    }
+    .descriptionTitleEdit{
+        top: 30px;
+    }
+    .descriptionEdit{
+        top: -10px;
+        height: 90px;
+        width: 70%;
+    }
+    .typeTitleEdit{
+        top: -30px;
+    }
+    .radio{
+        top: 20px;
+    }
+    .cancelarEdit{
+        left: 20px;
+    }
+    .cancelarLabelEdit{
+        top: 0px;
+        left: 20px;
+    }
+    .confirmarEdit{
+        left: -20px;
+    }
+    .confirmarLabelEdit{
+        top: 0px;
+        left: -20px;
+    }
+    .excluir, .atualizar{
+        top: -10px;
+        right: 0px;
+        text-align: center;
+        margin: auto;
+        width: max-content;
+    }
+    .excluir{
+        right: 50px;
+    }
+    .atualizar{
+        left: 50px;
+    }
+    
+
+}
+@media (max-width: 550px){
+    .clientes{
+        top: 110px;
+        font-size: 22px;
+    }
+    #buscarCliente, .erro{
+        top: 150px;
+        width: 70%;
+        height: 20px;
+    }
+    .erro{
+        font-size: 18px;
+    }
+    .askRemover{
+        width: 60%;
+        overflow: hidden;
+    }
+    .buscarCliente-btn{
+        top: 180px;
+        width: 70%;
+        height: 20px;
+        font-size: 14px;
+    }
+    #listaClientes, #listaClientesEdit{
+        width: 90%;
+    }
+    .cancelarEdit, .cancelarLabelEdit{
+        left: 50px;
+    }
+    .confirmarEdit, .confirmarLabelEdit{
+        left: -50px;
+    }
+}

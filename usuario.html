@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendando</title>
+    <link rel="stylesheet" href="/src/CSS/style.css">
+    <link rel="stylesheet" href="/src/CSS/usuarios.css">
+    <link rel="icon" href="./src/Images/Ico.png">
+
+</head>
+<body>
+    <header id="header">
+        <h1 id="title" class="title">Agendando</h1>
+        <nav id="nav">
+          <button id="menu_btn"><span id="hamburger"></span></button>
+          <ul id="menu">
+            <li><a href="./agenda.html" alt="Agenda">Agenda</a></li>
+            <li><a href="./clientes.html" alt="Clientes">Clientes</a></li>
+            <li><a href="./usuario.html" alt="Usuários">Usuários</a></li>
+            <li><a onclick="logout()" alt="Sair">Sair</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <h2 class="usuarios">Usuários</h2>
+        <section key="1" id="lista-usuario">
+            <div class="container">
+                <ol id="usuarios">
+                </ol>
+            </div>
+            <div id="askRemover" class="askRemover hide">
+                <p>Deseja remover o usuário?</p>
+                <Button id="sim">Sim</Button>
+                <button id="nao">Não</button>
+            </div>
+        </section>
+        <h2 class="usuarios hide">Cadastrar Usuário</h2>
+        <section key="2" id="cadastro-usuario" class="hide">
+            <div class="container">
+                <input id="atendente" type="text" name="name" placeholder="Nome Completo">
+                <input id="email" type="email" name="email" placeholder="Email">
+                <input type="text" id="telefone" placeholder="Telefone">
+                <input id="endereco" type="text" name="address" placeholder="Endereço">
+                <button class="cadastrar" onclick="cadastrarUsuario()">Cadastrar</button>
+            </div>
+        </section>
+        <section id="add-usuario-btn">
+            <button class="novo-usuario-btn">Novo Usuário</button>
+            <button class="voltar-usuario-btn hide">Voltar</button>
+        </section>
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore-compat.js"></script>
+    <script src="./src/Scripts/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/Scripts/logout.js"></script>
+    <script src="./src/Scripts/jquery.mask.min.js"></script>
+    <script src="./src/Scripts/usuarios.js"></script>
+    <script src="./src/Scripts/menu.js"></script>
+</body>
+</html>

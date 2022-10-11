@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <link rel="stylesheet" href="./src/CSS/index.css">
+    <title>Agendando</title>
+    <link rel="icon" href="./src/Images/Ico.png">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="title">Agendando</h1>
+            <div class="form">
+                <div>
+                    <input type="text" placeholder="Login" id="login">
+                    <p id="erro1" class="erro hide">Usuário não encontrado!</p>
+                    <p id="erro2" class="erro hide">Email invalido!</p>
+                    <input type="password" placeholder="Senha" id="password">
+                    <p id="erro3" class="erro hide">Senha incorreta!</p>
+                    <button class="singIn" onclick="login()">Entrar</button>
+                    <p id="erro4" class="erro hide">Erro ao fazer login!</p>
+                    <button class="register toRegister">Registrar</button>
+                    <button class="forgotPassword" onclick="recuperarSenha()">Esqueceu a Senha?</button>
+                </div>
+            </div>
+            <div class="form hide">
+                <div>
+                    <input type="text" placeholder="Email" id="email">
+                    <p id="erro5" class="erro hide">Email invalido!</p>
+                    <p id="erro6" class="erro hide">Email já está em uso!</p>
+                    <input type="password" placeholder="Senha" id="newPassword">
+                    <p id="erro7" class="erro hide">Senha mínima de 6 caracteres.</p>
+                    <button class="register" onclick="register()">Registrar</button>
+                    <p id="erro8" class="erro hide">Erro ao registrar!</p>
+                    <button class="forgotPassword back">Voltar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore-compat.js"></script>
+    <script src="./src/Scripts/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/Scripts/login.js"></script>
+    
+</body>
+</html>

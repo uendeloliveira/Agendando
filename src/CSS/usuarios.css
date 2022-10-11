@@ -1,0 +1,250 @@
+.usuarios{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    font-size: 36px;
+}
+#lista-usuario, #cadastro-usuario{
+    margin: auto;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 10px 50px 0px #4E4E4E;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+}
+#lista-usuario{
+    width: 1200px;
+    height: 700px;
+    top: 250px;
+}
+#cadastro-usuario{
+    width: 800px;
+    height: 550px;
+    top: 350px;
+}
+.novo-usuario-btn, .voltar-usuario-btn{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: #4E4E4E;
+    box-shadow: 0 0 10px 3px #4E4E4E ;
+    border: none;
+    width: max-content;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container{
+    position: absolute;
+    margin: 10px auto;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+}
+.container input{
+    margin: auto;
+    display: block;
+    border: 1px #4E4E4E solid;
+    border-radius: 20px;
+    width: 500px;
+    height: 30px;
+    font-size: 1rem;
+    margin-top: 50px;
+    text-align: center;
+    color: #000;
+}
+.container input::placeholder{
+    color: #000;
+    text-align: center;
+}
+.cadastrar{
+    margin: 50px auto;
+    display: block;
+    width: 300px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: #4E4E4E;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    font-size: 20px;
+    border: #fff;
+    cursor: pointer;
+}
+.listaUsuarios{
+    list-style:none;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.listaUsuarios:hover{
+    background-color:#4E4E4E;
+    color: #fff;
+    border-radius: 20px;
+}
+.listaUsuarios:hover .removerUsuario{
+    display: block;
+}
+.listaUsuarios p,h3{
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+    font-size: 18px;
+}
+h3{
+    font-size: 22px;
+}
+.removerUsuario{
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    width: 22px;
+    height: max-content;
+    left: 95%;
+    bottom:45px;
+    background-color: rgb(170, 0, 0);
+    color: #fff;
+    display: none;
+    z-index: 999;
+
+}
+.removerUsuario::before{
+    content: '-';
+}
+.askRemover{
+    position:relative;
+    display: grid;
+    margin: auto;
+    top: 50%;
+    width: 300px;
+    height: 200px;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #4E4E4E;
+    border-radius: 20px;
+}
+.askRemover p{
+    margin: auto;
+}
+.askRemover button{
+    margin: auto;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.hide{
+    display: none;
+}
+.hideAsk{
+    display: none;
+}
+@media (max-width: 1920px){
+    #lista-usuario{
+        height: 600px;
+    }
+    #cadastro-usuario{
+        height: 450px;
+    }
+    .container input{
+        margin-top: 40px;
+    }
+
+}
+@media (max-width: 1280px){
+    .usuarios{
+        font-size: 26px;
+    }
+    #lista-usuario{
+        width: 70%;
+        height: 400px;
+        top: 210px;
+    }
+    #cadastro-usuario{
+        width: 50%;
+        height: 350px;
+        top: 230px;
+    }
+    .novo-usuario-btn, .voltar-usuario-btn{
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .container input{
+        width: 70%;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .cadastrar{
+        margin: 25px auto;
+        width: 50%;
+        font-size: 18px;
+    }
+    .listaUsuarios p{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .removerUsuario{
+        top: 7%;
+    }
+
+}
+@media (max-width: 900px){
+    #lista-usuario{
+        height: 300px;
+    }
+    .container{
+        width: 90%;
+    }
+    .listaUsuarios p,h3{
+        width: 35%;
+        font-size: 16px;
+    }
+    .listaUsuarios h3{
+        font-size: 18px;
+    }
+    .removerUsuario{
+        left: 90%;
+    }
+}
+@media (max-width: 550px){
+    #lista-usuario, #cadastro-usuario{
+        width: 90%;
+    }
+    .listaUsuarios{
+        padding-bottom: 10px;
+    }
+    .listaUsuarios p,h3{
+        width: 100%;
+    }
+    .removerUsuario{
+        left: 50%;
+        bottom: 0px;
+    }
+}
+@media (max-width: 450px){
+    .container input{
+        width: 80%;
+    }
+    .cadastrar{
+        width: 60%;
+    }
+}

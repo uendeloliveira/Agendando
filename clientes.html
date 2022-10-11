@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendando</title>
+    <link rel="stylesheet" href="/src/CSS/clientes.css">
+    <link rel="stylesheet" href="/src/CSS/style.css">
+    <link rel="icon" href="./src/Images/Ico.png">
+
+</head>
+<body>
+    <header id="header">
+        <h1 id="title" class="title">Agendando</h1>
+        <nav id="nav">
+          <button id="menu_btn"><span id="hamburger"></span></button>
+          <ul id="menu">
+            <li><a href="./agenda.html" alt="Agenda">Agenda</a></li>
+            <li><a href="./clientes.html" alt="Clientes">Clientes</a></li>
+            <li><a href="./usuario.html" alt="Usuários">Usuários</a></li>
+            <li><a onclick="logout()" alt="Sair">Sair</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <h2 class="clientes">Clientes</h2>
+        <input type="text" placeholder="Buscar Cliente" id="buscarCliente" class="buscarCliente-input">
+        <button id="buscarCliente-btn" class="buscarCliente-btn">Buscar Cliente</button>
+        <p id="erro" class="erro hide">Cliente não encontrado!</p>
+        <div>
+            
+        </div>
+        <button id="buscarCliente-again-btn" class="buscarCliente-btn hide">Buscar Novamente</button>
+
+        <section id="listaClientes" class="hide">
+            <div class="container">
+                <ol>
+                    <li class="clienteDados" key="1">
+                        <p id="clienteUID" class="hide"></p>
+                        <p class="nome" id="cliente"></p>
+                        <h3 class="atendenteTitle">Usuário</h3>
+                        <p class="atendente" id="atendente"></p>
+                        <h3 class="horaTitle">Horário</h3>
+                        <p class="hora" id="hora"></p>
+                        <h3 class="dataTitle">Data</h3>
+                        <p class="data" id="data"></p>
+                        <h3 class="telefoneTitle">Contato</h3>
+                        <a class="telefone" id="telefone">Nenhum contato registrado</a>
+                        <h3 class="descriptionTitle">Anotações</h3>
+                        <p class="description" id="description"></p>
+                        <h3 class="typeTitle">Status</h3>
+                        <p class="type" id="type"></p>
+                        <p class="editar" id="editar">Editar</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section key="2" id="listaClientesEdit">
+            <div class="container">
+                <ol>
+                    <li class="clienteEdit" id="listaEdit">
+                        <h3 class="nomeTitleEdit">Cliente</h3>
+                        <input class="nomeEdit" id="clienteEdit"></input>
+                        <h3 class="atendenteTitleEdit">Usuário</h3>
+                        <input class="atendenteEdit" id="atendenteEdit"></input>
+                        <h3 class="horaTitleEdit">Horário</h3>
+                        <input class="horaEdit" id="horaEdit" type="time"></input>
+                        <h3 class="dataTitleEdit">Data</h3>
+                        <h3 class="telefoneTitleEdit">Contato</h3>
+                        <input class="telefoneEdit" id="telefoneEdit" type="text"></input>
+                        <h3 class="descriptionTitleEdit">Anotações</h3>
+                        <textarea class="descriptionEdit" id="descriptionEdit"></textarea>
+                        <h3 class="typeTitleEdit">Status</h3>
+                        <input class="radio cancelarEdit" id="cancelar" value="red" name="estado" type="radio"></input>
+                        <label for="cancelar" class="radio lebelEdit cancelarLabelEdit">Cancelar</label>
+                        <input class="radio confirmarEdit" id="confirmar" value="#63d867" name="estado" type="radio"></input>
+                        <label for="confirmar" class="radio lebelEdit confirmarLabelEdit">Confirmar</label>    
+                        <p class="atualizar" id="atualizar">Atualizar</p>
+                        <p class="excluir" id="excluirCliente">Excluir</p>
+                    </li>
+                </ol>
+            </div>
+            <div class="askRemover hide">
+                <p>Deseja excluir?</p>
+                <Button id="sim">Sim</Button>
+                <button id="nao">Não</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore-compat.js"></script>
+    <script src="./src/Scripts/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/Scripts/logout.js"></script>
+    <script src="./src/Scripts/jquery.mask.min.js"></script>
+    <script src="./src/Scripts/clientes.js"></script>
+    <script src="./src/Scripts/menu.js"></script>
+
+</body>
+</html>

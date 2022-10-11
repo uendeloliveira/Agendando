@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendando</title>
+    <link rel="stylesheet" href="/src/CSS/style.css">
+    <link rel="stylesheet" href="/src/CSS/evo-calendar.css">
+    <link rel="stylesheet" href="/src/CSS/agenda.css">
+    <link rel="icon" href="./src/Images/Ico.png">
+
+</head>
+<body>
+    <header id="header">
+      <h1 id="title" class="title">Agendando</h1>
+      <nav id="nav">
+        <button id="menu_btn"><span id="hamburger"></span></button>
+        <ul id="menu">
+          <li><a href="./agenda.html" alt="Agenda">Agenda</a></li>
+          <li><a href="./clientes.html" alt="Clientes">Clientes</a></li>
+          <li><a href="./usuario.html" alt="Usuários">Usuários</a></li>
+          <li><a onclick="logout()" alt="Sair">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="agenda">
+        <div id="usuarios" >
+          <h2 class="usuarios">Selecione o Usuário</h2>
+          <select id="listaDeUsuarios" class="selectUsuarios"></select>
+          <button class="selectUsuario-btn" id="button" onclick="abrirAgenda()">Abrir Agenda</button>
+        </div>
+        <div id="calendario">
+          <div  id="calendar"></div>
+        </div>
+      </section>
+      <section id="legenda">
+        <p class="red"></p>
+        <p class="redP">Cancelado</p>
+        <p class="blue"></p>
+        <p class="blueP">Agendado</p>
+        <p class="green"></p>
+        <p class="greenP">Confirmado</p>
+      </section>
+      <section id="add-back-schedule">
+        <button class="add-schedule">Agendar</button>
+        <button class="back-schedule hidden">Voltar</button>
+      </section>
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore-compat.js"></script>
+    <script src="./src/Scripts/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/Scripts/evo-calendar.js"></script>
+    <script src="./src/Scripts/logout.js"></script>
+    <script src="./src/Scripts/agenda.js"></script>
+    <script src="./src/Scripts/menu.js"></script>
+
+</body>
+</html>
