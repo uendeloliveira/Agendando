@@ -7,8 +7,9 @@ var title = document.getElementById('title')
 
 function toggleMenu() {
     nav.classList.toggle('active');
+    title.classList.toggle('titleCor');
     header.classList.toggle('headerColor');
-    title.classList.toggle('titleCor')
+    header.style.cssText = 'background-image: none;'
 }
 
 btnMobile.addEventListener('click', toggleMenu);

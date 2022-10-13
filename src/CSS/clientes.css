@@ -17,6 +17,7 @@
     border-radius: 20px;
     text-align: center;
     font-size: 18px;
+    z-index: 1;
 }
 .erro{
     position:absolute;
@@ -49,6 +50,7 @@
     border-radius: 20px;
     color: #fff;
     font-size: 18px;
+    z-index: 1;
 }
 #listaClientes, #listaClientesEdit{
     margin: auto;
@@ -62,7 +64,7 @@
     bottom: 0;
     right: 0;
 }
-.container{
+.box{
     position: absolute;
     margin: auto;
     width: 80%;
@@ -212,7 +214,8 @@
 }
 .atualizar{
     position: relative;
-    right: 30px;
+    width: max-content;
+    right: 0px;
     text-align: end;
     font-style: italic;
     cursor: pointer;
@@ -221,7 +224,8 @@
 }
 .excluir{
     position: relative;
-    right: 60px;
+    width: max-content;
+    right: 100px;
     text-align: start;
     font-style: italic;
     cursor: pointer;

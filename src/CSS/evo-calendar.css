@@ -20,19 +20,6 @@ body {
 input:focus, textarea:focus, button:focus {
     outline: none;
 }
-
-/* .agendar-paciente{
-    position: relative;
-    color: #5a5a5a;
-    width: 100%;
-    -webkit-box-shadow: 0 10px 50px -20px #006eff;
-            box-shadow: 0 10px 50px -20px #006eff;
-    margin: 0 auto;
-    overflow: hidden;
-    z-index: 1;
-} */
-
-
 .evo-calendar {
     position: relative;
     background-color: #fbfbfb;
@@ -44,7 +31,6 @@ input:focus, textarea:focus, button:focus {
     overflow: hidden;
     z-index: 1;
 }
-
 .calendar-sidebar {
     position: absolute;
     margin-top: 0;
@@ -446,9 +432,6 @@ tr.calendar-body .calendar-day .day[disabled] {
     height: 100%;
     border-radius: 50%;
 }
-
-
-
 button.icon-button {
     border: none;
     background-color: transparent;

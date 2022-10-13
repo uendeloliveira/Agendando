@@ -26,7 +26,7 @@
     top: 350px;
 }
 .novo-usuario-btn, .voltar-usuario-btn{
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
     padding: 20px 40px;
@@ -40,7 +40,7 @@
     font-size: 20px;
     cursor: pointer;
 }
-.container{
+.box{
     position: absolute;
     margin: 10px auto;
     width: 80%;
@@ -51,7 +51,7 @@
     right: 0;
     overflow-y: auto;
 }
-.container input{
+.box input{
     margin: auto;
     display: block;
     border: 1px #4E4E4E solid;
@@ -63,7 +63,7 @@
     text-align: center;
     color: #000;
 }
-.container input::placeholder{
+.box input::placeholder{
     color: #000;
     text-align: center;
 }
@@ -161,7 +161,7 @@ h3{
     #cadastro-usuario{
         height: 450px;
     }
-    .container input{
+    .box input{
         margin-top: 40px;
     }
 
@@ -186,7 +186,7 @@ h3{
         padding: 10px 20px;
         font-size: 16px;
     }
-    .container input{
+    .box input{
         width: 70%;
         font-size: 16px;
         margin-top: 30px;
@@ -211,7 +211,7 @@ h3{
     #lista-usuario{
         height: 300px;
     }
-    .container{
+    .box{
         width: 90%;
     }
     .listaUsuarios p,h3{
@@ -241,7 +241,7 @@ h3{
     }
 }
 @media (max-width: 450px){
-    .container input{
+    .box input{
         width: 80%;
     }
     .cadastrar{

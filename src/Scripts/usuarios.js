@@ -75,6 +75,9 @@ function listaUsuario(usuarios) {
         const li = document.createElement('li')
         li.classList.add('listaUsuarios')
         li.id = usuario.uid
+        li.addEventListener('click', ()=>{
+            console.log(usuario.atendente)
+        })
         
         
         const atendente = document.createElement('h3')
