@@ -2,7 +2,7 @@
 main{
     background-color: #1E1E1E;
 }
-.container{
+.box{
     position: relative;
     background-image: url(../Images/BG.png);
     background-size: 100% 100%;
@@ -92,7 +92,7 @@ main{
     display: none;
 }
 @media (max-width: 1280px){
-    .container{
+    .box{
         background-size: 200% 100%;
         background-position: -300px;
     }
@@ -136,7 +136,7 @@ main{
     }
 }
 @media (max-width: 450px){
-    .container{
+    .box{
         background-size: 300% 100%;
         background-position: -400px;
     }
