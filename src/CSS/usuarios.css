@@ -39,6 +39,7 @@
     text-shadow: #000 1px 1px 1px;
     font-size: 20px;
     cursor: pointer;
+    z-index: 9999;
 }
 .box{
     position: absolute;
