@@ -26,20 +26,20 @@
     top: 350px;
 }
 .novo-usuario-btn, .voltar-usuario-btn{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 20px 40px;
-    border-radius: 50px;
+    position:absolute;
+    margin: auto;
+    top: 150px;
+    left: 0px;
+    right: 0;
+    width: 500px;
+    height: 30px;
     background-color: #4E4E4E;
-    box-shadow: 0 0 10px 3px #4E4E4E ;
+    box-shadow: 0 0 5px 1px #4E4E4E;
     border: none;
-    width: max-content;
+    border-radius: 20px;
     color: #fff;
-    text-shadow: #000 1px 1px 1px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 9999;
+    font-size: 18px;
+    z-index: 1;
 }
 .box{
     position: absolute;
@@ -182,9 +182,8 @@ h3{
         top: 230px;
     }
     .novo-usuario-btn, .voltar-usuario-btn{
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
+        top: 140px;
+        width: 400px;
         font-size: 16px;
     }
     .box input{
@@ -227,6 +226,12 @@ h3{
     }
 }
 @media (max-width: 550px){
+    .novo-usuario-btn, .voltar-usuario-btn{
+        top: 150px;
+        width: 70%;
+        height: 20px;
+        font-size: 14px;
+    }
     #lista-usuario, #cadastro-usuario{
         width: 90%;
     }

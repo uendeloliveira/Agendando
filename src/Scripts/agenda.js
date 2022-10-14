@@ -22,6 +22,9 @@ function listaUsuarios(user) {
             uid: doc.id
         }));
         selectUsuario(usuarios)
+        if(usuarios.length == 0){
+            location.href = "./usuario.html"
+        }
 
     })
 }
