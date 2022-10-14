@@ -76,7 +76,7 @@ function listaUsuario(usuarios) {
         li.classList.add('listaUsuarios')
         li.id = usuario.uid
         li.addEventListener('click', ()=>{
-            console.log(usuario.atendente)
+            // console.log(usuario.atendente)
         })
         
         
