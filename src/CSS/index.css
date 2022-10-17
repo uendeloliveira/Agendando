@@ -40,7 +40,7 @@ main{
 .form div{
     display: grid;
 }
-.form div input {
+.form input{
     background: rgba(0, 0, 0,0);
     border: #4e4e4e80 2px solid;
     width: 300px;
@@ -50,11 +50,35 @@ main{
     padding-left: 20px;
     margin: 50px 0 0 0;
 }
+::-ms-reveal{
+    display: none;
+}
 .form div input::placeholder{
     color: #fff;
 }
+.eye{
+    width: max-content;
+    position: absolute;
+    top: 168px;
+    left: 90%;
+    border: none;
+    background:rgba(0, 0, 0,0) ;
+}
+.eye2{
+    width: max-content;
+    position: absolute;
+    top: 268px;
+    left: 90%;
+    border: none;
+    background:rgba(0, 0, 0,0) ;
+}
 .erro{
     background-color: red; 
+    color: #fff;
+    padding: 2px 20px;
+}
+#recoverPassword{
+    background-color:#3e9b67; 
     color: #fff;
     padding: 2px 20px;
 }
@@ -123,6 +147,12 @@ main{
         width: 250px;
         height: 40px;
         font-size: 16px;
+    }
+    .eye{
+        top: 153px;
+    }
+    .eye2{
+        top: 243px;
     }
 }
 @media (max-height: 800px){
