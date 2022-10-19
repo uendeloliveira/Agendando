@@ -1,14 +1,15 @@
 // VERIFICAR SE ESTÁ LOGADO
 
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        listaUsuarios(user)
-        criarCliente()
-    } else {
-        location.href = "./index.html";
-    }
-});
-
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//         listaUsuarios(user)
+//         criarCliente()
+//     } else {
+//         location.href = "./index.html";
+//     }
+// });
+listaUsuarios()
+criarCliente()
 // FORMULÁRIO
 
 const form = {

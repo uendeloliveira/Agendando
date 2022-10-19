@@ -1,19 +1,19 @@
 // VERIFICAR SE ESTÁ LOGADO
 
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        listaUsuarios(user)
-    } else {
-        location.href = "./index.html";
-    }
-});
-
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//         listaUsuarios(user)
+//     } else {
+//         location.href = "./index.html";
+//     }
+// });
+listaUsuarios()
 // CHAMANDO USUARIOS CADASTRADOS
 
 function listaUsuarios(user) {
     firebase.firestore()
     .collection('Usuarios')
-    .where('user.uid', '==', user.uid)
+    // .where('user.uid', '==', user.uid)
     .orderBy('atendente')
     .get()
     .then(snapshot => {

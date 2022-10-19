@@ -1,12 +1,13 @@
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        criarUsuario()
-        listaUsuarios(user)
-    } else {
-        location.href = "./index.html";
-    }
-});
-
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//         criarUsuario()
+//         listaUsuarios(user)
+//     } else {
+//         location.href = "./index.html";
+//     }
+// });
+criarUsuario()
+listaUsuarios()
 // FORMULÁRIO PARA CADASTRO DE USUARIOS
 
 const form = {
