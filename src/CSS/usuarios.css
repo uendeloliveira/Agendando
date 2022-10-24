@@ -98,13 +98,13 @@
 .listaUsuarios:hover .removerUsuario{
     display: block;
 }
-.listaUsuarios p,h3{
+.listaUsuarios p,.listaUsuarios h3{
     display: inline-block;
     width: 45%;
     padding: 10px;
     font-size: 18px;
 }
-h3{
+.listaUsuarios h3{
     font-size: 22px;
 }
 .removerUsuario{
@@ -156,6 +156,29 @@ h3{
 .hideAsk{
     display: none;
 }
+.guia{
+    position: relative;
+    top: 600px;
+    border-top: #4E4E4E solid 1px;
+    width: 80%;
+    margin: auto;
+}
+.guia h2:first-child{
+    margin-top: 50px;
+}
+.guia h2,.guia h3,.guia p,.guia li{
+    width: 70%;
+    margin: 20px auto;
+}
+.guia h3,.guia p{
+    padding-left: 20px;
+}
+.guia li{
+    padding-left: 40px;
+}
+.guia a{
+    text-decoration: none;
+}
 @media (max-width: 1920px){
     #lista-usuario{
         height: 600px;
@@ -200,7 +223,7 @@ h3{
     .listaUsuarios p{
         font-size: 16px;
     }
-    h3{
+    .listaUsuarios h3{
         font-size: 20px;
     }
     .removerUsuario{
@@ -215,7 +238,7 @@ h3{
     .box{
         width: 90%;
     }
-    .listaUsuarios p,h3{
+    .listaUsuarios p,.listaUsuarios h3{
         width: 35%;
         font-size: 16px;
     }
@@ -239,7 +262,7 @@ h3{
     .listaUsuarios{
         padding-bottom: 10px;
     }
-    .listaUsuarios p,h3{
+    .listaUsuarios p,.listaUsuarios h3{
         width: 100%;
     }
     .removerUsuario{
