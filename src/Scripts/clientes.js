@@ -1,13 +1,19 @@
 
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//         clienteUID(user)
-//     } else {
-//         location.href = "./index.html";
-//     }
-// });
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        clienteUID(user)
+        $('#calendarIMG').hide()
+        $('#calendar').show()
+        $('#login,#logout').toggleClass("hide")
+    }
+});
 
-clienteUID()
+// LOGIN
+
+function login(){
+    location.href = "./login.html";
+}
+
 function clienteUID(user) {
     firebase.firestore()
     .collection('Clientes')
@@ -29,11 +35,11 @@ function editar(clientes){
     $('#buscarCliente-btn').click(() =>{
         const clienteEncontrado = document.getElementById('buscarCliente')    
         const cliente = clientes.find((cliente) => cliente.cliente == clienteEncontrado.value)
-        console.log(cliente)
         if(cliente){
             $('.buscarCliente-btn,#buscarCliente-again-btn,.buscarCliente-input,#listaClientes').toggleClass("hide");
             console.log(cliente.cliente)
             
+
             // FORMATAR DATA PARA BR   
 
             function formatDateToBR() {

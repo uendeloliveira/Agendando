@@ -16,10 +16,10 @@ body{
     z-index: 1000;
     height: 70px;
     padding: 15px;
-    background-image: url(/src/Images/Fundo.png);
+    background-image: url(/src/Images/FundoHeader.png);
     border-bottom: 2px solid #4E4E4E;
 }
-.title{
+.title, .logo{
     margin-left: 50px;
     background-image: linear-gradient(to right, #4E4E4E80 0%, #4E4E4E 25%, #4E4E4E 50%, #4E4E4E80 100%);
     background-clip: text;
@@ -48,12 +48,18 @@ body{
 #menu_btn{
     opacity: 0;
 }
+
 #menu a{
     display: block;
     font-size: 24px;
-    color: #4E4E4E;
     text-decoration: none;
     cursor: pointer;
+}
+.menuItemLogin {
+    color: #fff;
+}
+.menuItem {
+    color: #4E4E4E;
 }
 #menu li{
     list-style: none;
@@ -64,6 +70,9 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: rgb(168, 168, 168);
     border-radius: 50px;
+}
+.hide{
+    display: none;
 }
 @media (max-width: 1000px) {
     .headerColor{

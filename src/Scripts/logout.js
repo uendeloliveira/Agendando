@@ -1,14 +1,12 @@
-// firebase.auth().onAuthStateChanged(user => {
-//     if (!user) {
-//         location.href = "./index.html"
-//     }
-//     // return findTransactions(user);
-// })
+firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+        // location.href = "./index.html"
+    }
+})
 function logout () {
-    location.href = "./index.html"
-//     firebase.auth().signOut().then(() =>{
-//         location.href = ""
-//     }).catch(() => {
-//         alert('Error ao fazer logout')
-//     })
+    firebase.auth().signOut().then(() =>{
+        location.href = ""
+    }).catch(() => {
+        alert('Error ao fazer logout')
+    })
 }

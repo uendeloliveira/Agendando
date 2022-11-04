@@ -1,15 +1,21 @@
 // VERIFICAR SE ESTÁ LOGADO
 
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//         listaUsuarios(user)
-//         criarCliente()
-//     } else {
-//         location.href = "./index.html";
-//     }
-// });
-listaUsuarios()
-criarCliente()
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        listaUsuarios(user)
+        criarCliente()
+        $('#calendarIMG').hide()
+        $('#calendar').show()
+        $('#login,#logout').toggleClass("hide")
+    }
+});
+
+// LOGIN
+
+function login(){
+    location.href = "./login.html";
+}
+
 // FORMULÁRIO
 
 const form = {

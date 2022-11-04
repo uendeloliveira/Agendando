@@ -1,104 +1,102 @@
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//         location.href = "./agenda.html"
-//     }
-// })
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        location.href = "./agenda.html"
+    }
+})
 function login() {
-    location.href = "./agenda.html"
-    // var loginEmail = document.getElementById('login').value;
-    // var loginSenha = document.getElementById('password').value;
+    var loginEmail = document.getElementById('Login').value;
+    var loginSenha = document.getElementById('password').value;
 
-    // firebase.auth().signInWithEmailAndPassword(
-    //     loginEmail, loginSenha
-    // ).then(() => {
-    //     location.href = "./agenda.html"
-    // }).catch(error => {
-    //     if (error.code == "auth/user-not-found"){
-    //         $('#erro1').show()
-    //         $('#erro2').hide()
-    //         $('#erro3').hide()
-    //     }
-    //     else if (error.code == "auth/invalid-email"){
-    //         $('#erro1').hide()
-    //         $('#erro2').show()
-    //         $('#erro3').hide()
-    //     }
-    //     else if (error.code == "auth/wrong-password"){
-    //         $('#erro1').hide()
-    //         $('#erro2').hide()
-    //         $('#erro3').show()
-    //     }
-    //     else{
-    //         $('#erro1').hide()
-    //         $('#erro2').hide()
-    //         $('#erro3').hide()
-    //         $('#erro4').show()
-    //         console.log(error.code)
-    //     }
-    // });
+    firebase.auth().signInWithEmailAndPassword(
+        loginEmail, loginSenha
+    ).then(() => {
+        location.href = "./agenda.html"
+    }).catch(error => {
+        if (error.code == "auth/user-not-found"){
+            $('#erro1').show()
+            $('#erro2').hide()
+            $('#erro3').hide()
+        }
+        else if (error.code == "auth/invalid-email"){
+            $('#erro1').hide()
+            $('#erro2').show()
+            $('#erro3').hide()
+        }
+        else if (error.code == "auth/wrong-password"){
+            $('#erro1').hide()
+            $('#erro2').hide()
+            $('#erro3').show()
+        }
+        else{
+            $('#erro1').hide()
+            $('#erro2').hide()
+            $('#erro3').hide()
+            $('#erro4').show()
+            console.log(error.code)
+        }
+    });
 }
 $('.toRegister,.back').click(() =>{
     $('.form').toggleClass("hide");
 })
 function register(){
-    location.href = "./agenda.html"
-    // var registerEmail = document.getElementById('email').value;
-    // var registerSenha = document.getElementById('newPassword').value;
-    // var confirmSenha = document.getElementById('confirmPassword').value;
-    // if(confirmSenha == registerSenha){
-    // firebase.auth().createUserWithEmailAndPassword(
-    //         registerEmail, registerSenha
-    // ).then(() => {
-    //     location.href = "./agenda.html"
-    // }).catch(error => {
-    //     console.log(error.code)
-    //     if (error.code == "auth/invalid-email"){
-    //         $('#erro6').show()
-    //         $('#erro7').hide()
-    //         $('#erro8').hide()
-    //     } else if (error.code == "auth/email-already-in-use"){
-    //         $('#erro6').hide()
-    //         $('#erro7').show()
-    //         $('#erro8').hide()
-    //     } else if (error.code == "auth/weak-password"){
-    //         $('#erro6').hide()
-    //         $('#erro7').hide()
-    //         $('#erro8').show()
-    //     }else{
-    //         $('#erro9').show()
-    //         console.log(error.code)
-    //     }
-    // })  
-    // }else{
-    //     $('#erro109').show()
-    // } 
+    var registerEmail = document.getElementById('email').value;
+    var registerSenha = document.getElementById('newPassword').value;
+    var confirmSenha = document.getElementById('confirmPassword').value;
+    if(confirmSenha == registerSenha){
+    firebase.auth().createUserWithEmailAndPassword(
+            registerEmail, registerSenha
+    ).then(() => {
+        location.href = "./agenda.html"
+    }).catch(error => {
+        console.log(error.code)
+        if (error.code == "auth/invalid-email"){
+            $('#erro6').show()
+            $('#erro7').hide()
+            $('#erro8').hide()
+        } else if (error.code == "auth/email-already-in-use"){
+            $('#erro6').hide()
+            $('#erro7').show()
+            $('#erro8').hide()
+        } else if (error.code == "auth/weak-password"){
+            $('#erro6').hide()
+            $('#erro7').hide()
+            $('#erro8').show()
+        }else{
+            $('#erro9').show()
+            console.log(error.code)
+        }
+    })  
+    }else{
+        $('#erro109').show()
+    } 
 }
 
 function recuperarSenha(){
-    // var loginEmail = document.getElementById('login').value;
-    // firebase.auth().sendPasswordResetEmail(loginEmail)
-    // .then(()=>{
-    //     $('#recoverPassword').show()
-    //     console.log('Email enviado')
-    // }).catch(error => {
-    //     if (error.code == "auth/user-not-found"){
-    //         $('#erro1').show()
-    //         $('#erro2').hide()
-    //         $('#erro3').hide()
-    //     }else if(error.code == "auth/missing-email"){
-    //         $('#erro1').hide()
-    //         $('#erro2').hide()
-    //         $('#erro3').hide()
-    //         $('#erro5').show()
-    //     }else{
-    //         $('#erro1').hide()
-    //         $('#erro2').hide()
-    //         $('#erro3').hide()
-    //         $('#erro4').show()
-    //         $('#erro5').hide()
-    //         console.log(error.code)
-    //     }
-    // })
+    var loginEmail = document.getElementById('login').value;
+    firebase.auth().sendPasswordResetEmail(loginEmail)
+    .then(()=>{
+        $('#recoverPassword').show()
+        console.log('Email enviado')
+    }).catch(error => {
+        if (error.code == "auth/user-not-found"){
+            $('#erro1').show()
+            $('#erro2').hide()
+            $('#erro3').hide()
+        }else if(error.code == "auth/missing-email"){
+            $('#erro1').hide()
+            $('#erro2').hide()
+            $('#erro3').hide()
+            $('#erro5').show()
+        }else{
+            $('#erro1').hide()
+            $('#erro2').hide()
+            $('#erro3').hide()
+            $('#erro4').show()
+            $('#erro5').hide()
+            console.log(error.code)
+        }
+    })
 }
 function mostrarSenha() {
     var tipo = document.getElementById("password");
@@ -142,3 +140,8 @@ function mostrarSenha2(){
 function reload(){
     location.href = './index.html'
 }
+
+// MUDAR CSS
+
+const header = document.getElementById('header')
+header.style.cssText = 'background-image:none;'

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <link rel="stylesheet" href="./src/CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Agendando</title>
+    <link rel="icon" href="./src/Images/Ico.png">
+    <style>.cookieConsentContainer{z-index:999;width:350px;min-height:20px;box-sizing:border-box;padding:30px 30px 30px 30px;background:#232323;overflow:hidden;position:fixed;bottom:30px;right:30px;display:none}.cookieConsentContainer .cookieTitle a{font-family:OpenSans,arial,sans-serif;color:#fff;font-size:22px;line-height:20px;display:block}.cookieConsentContainer .cookieDesc p{margin:0;padding:0;font-family:OpenSans,arial,sans-serif;color:#fff;font-size:13px;line-height:20px;display:block;margin-top:10px}.cookieConsentContainer .cookieDesc a{font-family:OpenSans,arial,sans-serif;color:#fff;text-decoration:underline}.cookieConsentContainer .cookieButton a{display:inline-block;font-family:OpenSans,arial,sans-serif;color:#fff;font-size:14px;font-weight:700;margin-top:14px;background:#000;box-sizing:border-box;padding:15px 24px;text-align:center;transition:background .3s}.cookieConsentContainer .cookieButton a:hover{cursor:pointer;background:#3e9b67}@media (max-width:980px){.cookieConsentContainer{bottom:0!important;left:0!important;width:100%!important}}</style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav">
+          <button id="menu_btn"><span id="hamburger"></span></button>
+          <ul id="menu">
+            <li><a class="menuItemLogin" href="./agenda.html" alt="Agenda">Agenda</a></li>
+            <li><a class="menuItemLogin" href="./clientes.html" alt="Clientes">Clientes</a></li>
+            <li><a class="menuItemLogin" href="./usuario.html" alt="Usuários">Usuários</a></li>
+            <li id="login"><a class="menuItemLogin" onclick="login()" alt="Login">Login</a></li>
+            <li id="logout" class="hide"><a class="menuItemLogin" onclick="logout()" alt="Sair">Sair</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <h1 id="title" class="title"><a href="/index.html">Agendando</a></h1>
+            <div class="form">
+                <div>
+                    <input type="text" placeholder="Login" id="Login">
+                    <p id="recoverPassword" class="hide">Email Enviado</p>
+                    <p id="erro1" class="erro hide">Usuário não encontrado!</p>
+                    <p id="erro2" class="erro hide">Email invalido!</p>
+                    <input type="password" placeholder="Senha" id="password">
+                    <button class="eye" onclick="mostrarSenha()"><i id="eye" class="fa-regular fa-eye"></i></button>
+                    <p id="erro3" class="erro hide">Senha incorreta!</p>
+                    <button class="singIn" onclick="login()">Entrar</button>
+                    <p id="erro4" class="erro hide">Erro ao fazer login!</p>
+                    <button class="register toRegister">Registrar</button>
+                    <button class="forgotPassword" onclick="recuperarSenha()">Esqueceu a Senha?</button>
+                    <p id="erro5" class="erro hide">Insira um endereço de Email válido.</p>
+                </div>
+            </div>
+            <div class="form hide">
+                <div>
+                    <input type="text" placeholder="Email" id="email">
+                    <p id="erro6" class="erro hide">Email invalido!</p>
+                    <p id="erro7" class="erro hide">Email já está em uso!</p>
+                    <input type="password" placeholder="Senha" id="newPassword">
+                    <button class="eye" onclick="mostrarSenha1()"><i id="eye1" class="fa-regular fa-eye"></i></button>
+                    <input type="password" placeholder="Confirmar Senha" id="confirmPassword">
+                    <button class="eye2" onclick="mostrarSenha2()"><i id="eye2" class="fa-regular fa-eye"></i></button>
+                    <p id="erro8" class="erro hide">Mínimo de 6 caracteres.</p>
+                    <button class="register" onclick="register()">Registrar</button>
+                    <p id="erro9" class="erro hide">Erro ao registrar!</p>
+                    <p id="erro10" class="erro hide"></p>
+                    <button class="forgotPassword back">Voltar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore-compat.js"></script>
+    <script src="./src/Scripts/firebase-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/Scripts/login.js"></script>
+    <script>var purecookieTitle="Política",purecookieDesc="Ao usar este site, você automaticamente aceita nossa",purecookieLink='<a href="/politica.html" target="_blank">Política de Privacidade</a>'+'.',purecookieButton="Entendido";function pureFadeIn(e,o){var i=document.getElementById(e);i.style.opacity=0,i.style.display=o||"block",function e(){var o=parseFloat(i.style.opacity);(o+=.02)>1||(i.style.opacity=o,requestAnimationFrame(e))}()}function pureFadeOut(e){var o=document.getElementById(e);o.style.opacity=1,function e(){(o.style.opacity-=.02)<0?o.style.display="none":requestAnimationFrame(e)}()}function setCookie(e,o,i){var t="";if(i){var n=new Date;n.setTime(n.getTime()+24*i*60*60*1e3),t="; expires="+n.toUTCString()}document.cookie=e+"="+(o||"")+t+"; path=/"}function getCookie(e){for(var o=e+"=",i=document.cookie.split(";"),t=0;t<i.length;t++){for(var n=i[t];" "==n.charAt(0);)n=n.substring(1,n.length);if(0==n.indexOf(o))return n.substring(o.length,n.length)}return null}function eraseCookie(e){document.cookie=e+"=; Max-Age=-99999999;"}function cookieConsent(){getCookie("purecookieDismiss")||(document.body.innerHTML+='<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>'+purecookieTitle+'</a></div><div class="cookieDesc"><p>'+purecookieDesc+" "+purecookieLink+'</p></div><div class="cookieButton"><a id="entendido" onClick="purecookieDismiss();">'+purecookieButton+"</a></div></div>",pureFadeIn("cookieConsentContainer"))}function purecookieDismiss(){setCookie("purecookieDismiss","1",7),pureFadeOut("cookieConsentContainer"),reload()}window.onload=function(){cookieConsent()};</script>
+
+    
+</body>
+</html>

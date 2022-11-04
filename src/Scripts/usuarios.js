@@ -1,13 +1,19 @@
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//         criarUsuario()
-//         listaUsuarios(user)
-//     } else {
-//         location.href = "./index.html";
-//     }
-// });
-criarUsuario()
-listaUsuarios()
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        criarUsuario()
+        listaUsuarios(user)
+        $('#calendarIMG').hide()
+        $('#calendar').show()
+        $('#login,#logout').toggleClass("hide")
+    }
+});
+
+// LOGIN
+
+function login(){
+    location.href = "./login.html";
+}
+
 // FORMULÁRIO PARA CADASTRO DE USUARIOS
 
 const form = {

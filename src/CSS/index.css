@@ -1,23 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
-main{
-    background-color: #1E1E1E;
-}
-.box{
+.box1{
     position: relative;
-    background-image: url(../Images/BG.png);
-    background-size: 100% 100%;
-    opacity:1;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 70px;
+    background-image: url(/src/Images/BGIndex.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1150px;
 }
 .title{
     position: absolute;
     width:  max-content;
     height: max-content;
-    top: -550px;
+    top: -700px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -31,146 +24,229 @@ main{
     font-size: 150px;
     font-weight: 100;
 }
-.form{
+.box2{
+    position: absolute;
+    width: 50%;
+    height: 300px;
+    top: 670px;
+}
+.p1{
     position: relative;
-    width: 300px;
-    height: 320px;
-    top: 50px;
+    top: -100px;
+    left: 25%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Kurale', serif;
+    color: #000;
+    margin-bottom: 20px;
+    z-index: 1;
 }
-.form div{
+.size{
+    font-size: 30px;
+}
+.box3{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: #717171;
+    justify-content: space-around;
+    padding: 0 25%;
+}
+.h3{
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 22px;
+    font-family: 'Kurale', serif;
+}
+.p2{
+    text-align: center;
+    width: 300px;
+    z-index: 1;
+    color: #fff;
+    font-family: 'Kurale', serif;
+}
+.h2{
+    font-family: 'Kurale', serif;
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+    padding: 100px 0;
+}
+.box4{
+    position: relative;
+    top: 100px;
+    width: 1000px;
     display: grid;
+    margin: auto;
+    grid-template-areas:
+    'p3 img p5'
+    'p4 img p6';
 }
-.form input{
-    background: rgba(0, 0, 0,0);
-    border: #4e4e4e80 2px solid;
+.img1{
+    position: relative;
+    top: -100px;
+    grid-area: img;
+}
+.p3,.p4,.p5,.p6{
+    position: relative;
+    text-align: center;
+    width: 150px;
+    font-family: 'Kurale', serif;
+    font-size: 22px;
+    height: max-content;
+}
+.p3{
+    grid-area: p3;
+}
+.p4{
+    grid-area: p4;
+}
+.p5{
+    grid-area: p5;
+}
+.p6{
+    grid-area: p6;
+}
+.box5{
+    display: flex;
+    margin: auto;
+    width: 70%;
+    height: 400px;
+    background-color: #717171;
+    justify-content: space-around;
+}
+.box5 div{
+    position: relative;
+    top: 50px;
     width: 300px;
-    height: 50px;
-    font-size: 20px;
+    height: 300px;
     color: #fff;
-    padding-left: 20px;
-    margin: 50px 0 0 0;
+    text-align: center;
 }
-::-ms-reveal{
-    display: none;
+.box5 img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
-.form div input::placeholder{
-    color: #fff;
+.box5 p, .box5 h3{
+    margin: 10px;
 }
-.eye{
-    width: max-content;
-    position: absolute;
-    top: 168px;
-    left: 90%;
-    border: none;
-    background:rgba(0, 0, 0,0) ;
-}
-.eye2{
-    width: max-content;
-    position: absolute;
-    top: 268px;
-    left: 90%;
-    border: none;
-    background:rgba(0, 0, 0,0) ;
-}
-.erro{
-    background-color: red; 
-    color: #fff;
-    padding: 2px 20px;
-}
-#recoverPassword{
-    background-color:#3e9b67; 
-    color: #fff;
-    padding: 2px 20px;
-}
-.singIn{
-    margin: 50px 0 0 0;
-    width: 300px;
-    height: 50px;
-    background-color: #4E4E4E;
-    border: #4E4E4E 2px solid;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-.register{
-    margin: 50px 0 0 0;
-    width: 300px;
-    height: 50px;
-    background-color: #4e4e4e80;
-    border: #4E4E4E 2px solid;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-.forgotPassword{
-    margin: 50px 0 0 0;
-    width: 300px;
-    height: 50px;
-    background-color:rgba(0, 0, 0,0);
-    border: rgba(0, 0, 0,0) 2px solid;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-.hide{
-    display: none;
-}
-@media (max-width: 1280px){
-    .box{
-        background-size: 200% 100%;
-        background-position: -300px;
-    }
+@media (max-width:1200px){
     .title{
-        top: -350px;
         font-size: 100px;
     }
-    .form{
-        width: 250px;
-        height: 220px;
-        top: 50px;
+    .box4{
+        width: 80%;
+        gap: 0 50px;
     }
-    .form div input {
-        width: 250px;
-        height: 40px;
+    .img1{
+        top: -50px;
+        width: 300px;
     }
-    .singIn{
-        width: 250px;
-        height: 40px;
-        font-size: 18px;
-    }
-    .register{
-        width: 250px;
-        height: 40px;
-        font-size: 18px;
-    }
-    .forgotPassword{
-        width: 250px;
-        height: 40px;
+    .p3,.p4,.p5,.p6{
+        width: 100px;
         font-size: 16px;
     }
-    .eye{
-        top: 153px;
+    .box5{
+        width: 80%;
     }
-    .eye2{
-        top: 243px;
+    .box5 div{
+        width: 200px;
+    }
+    .box5 img{
+        width: 150px;
+        height: 150px;
     }
 }
-@media (max-height: 800px){
-    .form{
-        top: -50px;
+@media (max-width:900px){
+    .box3{
+        padding: 0 0;
+    }
+    .box3 div{
+        width: 200px;
+    }
+    .h3{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .p2{
+        width: 200px;
+        font-size: 14px;
     }
 }
-@media (max-width: 700px){
+@media (max-width:700px){
     .title{
+        top: -300px;
         font-size: 80px;
     }
-}
-@media (max-width: 450px){
-    .box{
-        background-size: 300% 100%;
-        background-position: -400px;
+    .p1{
+        margin-bottom: 18px;
     }
+    .size{
+        font-size: 26px;
+    }
+    .box1{
+        height: 800px;
+    }
+    .box2{
+        top: 500px;
+    }
+    .box3 div{
+        width: 100px;
+    }
+    .p2{
+        width: 100px;
+        font-size: 14px;
+    }
+    .box4{
+        width: 100%;
+        gap: 0 50px;
+        justify-content: center;
+    }
+    .img1{
+        margin: auto;
+        width: 200px;
+    }
+    .p3,.p4,.p5,.p6{
+        text-align: center;
+        width: 50px;
+    }
+    .box5{
+        width:100%;
+    }
+    .box5 div{
+        width: 200px;
+    }
+    .box5 img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width:500px){
     .title{
         font-size: 50px;
+    }
+    .box2{
+        left: -10%;
+        width: 80%;
+    }
+    .h2{
+        font-size: 24px;
+    }
+    .box4{
+        gap: 0 10px;
+    }
+    .p3,.p4,.p5,.p6{
+        font-size: 12px;
+    }
+    .box5 div{
+        width: 100px;
+    }
+    .box5 img{
+        width: 80px;
+        height: 80px;
     }
 }

@@ -212,6 +212,9 @@ label{
 .guia a{
     text-decoration: none;
 }
+.hide{
+    display: none;
+}
 @media (max-width: 1920px){
     #calendar{
         margin-top: 250px;

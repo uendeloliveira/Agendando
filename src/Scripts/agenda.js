@@ -1,19 +1,25 @@
 // VERIFICAR SE ESTÁ LOGADO
 
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//         listaUsuarios(user)
-//     } else {
-//         location.href = "./index.html";
-//     }
-// });
-listaUsuarios()
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        listaUsuarios(user)
+        $('#calendarIMG').hide()
+        $('#calendar').show()
+        $('#login,#logout').toggleClass("hide")
+    }
+});
+
+// LOGIN
+
+function login(){
+    location.href = "./login.html";
+}
 // CHAMANDO USUARIOS CADASTRADOS
 
 function listaUsuarios(user) {
     firebase.firestore()
     .collection('Usuarios')
-    // .where('user.uid', '==', user.uid)
+    .where('user.uid', '==', user.uid)
     .orderBy('atendente')
     .get()
     .then(snapshot => {
