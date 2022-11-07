@@ -4,7 +4,7 @@ main{
 }
 .box{
     position: relative;
-    background-image: url(../Images/BGLogin.png);
+    background-image: url(../Images/BGLogin.webp);
     background-size: 100% 100%;
     opacity:1;
     width: 100%;
